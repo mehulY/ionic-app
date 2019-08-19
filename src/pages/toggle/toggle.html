@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Toggle
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Is an input component that holds a boolean value</p>
+    <hr>
+    <p>Simple toggle checked to false</p>
+    <ion-item>
+        <ion-label>Activate</ion-label>
+        <ion-toggle checked="false" ></ion-toggle>
+    </ion-item>
+    <hr>
+    <p>Toggle with value catched and consoled</p>
+    <ion-item>
+        <ion-label>Accept</ion-label>
+        <ion-toggle [(ngModel)]="isToggled" (ionChange)="notify()" ></ion-toggle>
+    </ion-item>
+    <hr>
+    <p>Toggle that is disabled</p>
+    <ion-item>
+        <ion-label>Subscribe</ion-label>
+        <ion-toggle disabled checked="false"></ion-toggle>
+    </ion-item>
+</ion-content>

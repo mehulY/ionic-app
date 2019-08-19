@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Modals</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Modals slide in off screen to display a temporary UI often used for login or signup pages, message composition and option selection</p>
+
+  <ion-list>
+    <ion-list-header>
+      Hobbies
+    </ion-list-header>
+    <a ion-item (click)="openModal({charNum: 0})">
+      Dance
+    </a>
+    <a ion-item (click)="openModal({charNum: 1})">
+      Music
+    </a>
+    <a ion-item (click)="openModal({charNum: 2})">
+      Travel
+    </a>
+  </ion-list>
+
+</ion-content>

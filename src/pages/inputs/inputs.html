@@ -1,0 +1,93 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Inputs
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Essentioal for collecting and handling user input in a secure way</p>
+    <p>Fixed inline labels:</p>
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="user.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button type="submit" (click)="displayData()" ion-button block>Sign In</button>
+        </ion-item>
+    </ion-list>
+    <p>Floating labels:</p>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="user1.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="user1.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button type="submit" (click)="displayData('1')" ion-button block>Sign In</button>
+        </ion-item>
+    </ion-list>
+    <p>Inline labels:</p>
+    <ion-list>
+        <ion-item>
+            <ion-label>Username</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="user2.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Password</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="user2.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button type="submit" (click)="displayData('2')" ion-button block>Sign In</button>
+        </ion-item>
+    </ion-list>
+    <p>Inset labels:</p>
+    <ion-list inset>
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="user3.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="user3.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button type="submit" (click)="displayData('3')" ion-button block>Sign In</button>
+        </ion-item>
+    </ion-list>
+    <p>Placeholder labels:</p>
+    <ion-list>
+        <ion-item>
+            <ion-input type="text" value="" [(ngModel)]="user4.username" placeholder="Username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" value="" [(ngModel)]="user4.password" placeholder="Password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button type="submit" (click)="displayData('4')" ion-button block>Sign In</button>
+        </ion-item>
+    </ion-list>
+    <p>Stacked labels:</p>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="user5.username"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" value="" [(ngModel)]="user5.password"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button type="submit" (click)="displayData('5')" ion-button block>Sign In</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

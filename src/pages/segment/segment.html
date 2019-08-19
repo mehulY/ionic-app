@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Segments
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Is a collection of buttons that are displayed in line</p>
+    <p>They can act as filter, showing/hiding elements based on segment value</p>
+    <p>The segment can also be rather included in toolbar</p>
+    <hr>
+    <ion-segment [(ngModel)]="pet" >
+        <ion-segment-button value="puppies">Puppies</ion-segment-button>
+        <ion-segment-button value="kittens">Kittens</ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'puppies'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/beagle.jpg">
+                </ion-thumbnail>
+                <h2>Beagle</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/pomeranian.jpg">
+                </ion-thumbnail>
+                <h2>Pomeranian</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/shih.jpg">
+                </ion-thumbnail>
+                <h2>Shih</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/retriever.jpg">
+                </ion-thumbnail>
+                <h2>Golden Retriever</h2>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngSwitchCase="'kittens'">
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/norwegian.jpg">
+                </ion-thumbnail>
+                <h2>Norwegian</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/persian.jpg">
+                </ion-thumbnail>
+                <h2>Persian</h2>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                    <img src="assets/img/rangdoll.jpg">
+                </ion-thumbnail>
+                <h2>Rangdoll</h2>
+            </ion-item>
+        </ion-list>
+    </div> 
+    
+</ion-content>
+
+
+  

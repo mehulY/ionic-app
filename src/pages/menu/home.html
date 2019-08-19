@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons start>
+      <button ion-button  (click)="closeBtn()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>The Menu Component is a Navigation drawer that slides in from the side of the current view.
+    By default it slides from left but that can also be over ridden.
+  </p>
+  <p>Menu will be displayed differently based on mode. However display type caan be changed to any of the 
+    available menu types
+  </p>
+  <p>The menu element should be a sibling to the app's content element</p>
+  <p>There can be any number of menus attached to the content. These can be 
+    controlled from the templates or programatically using the MenuController
+  </p>
+  <hr>
+  <p>Click on the menu icon on the lop left to see the sliding menu options</p>
+  <hr>
+  <p>Click on the button below to see the same action as that of the menu icon button of top 
+    left region.
+  </p>
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <hr>
+  <p>Click on the 'Close' item on top right to close the menu and go to the list of UIComponents</p>
+
+</ion-content>

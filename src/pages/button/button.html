@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Buttons
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>One of the most common and essential UI component</p>
+    <p>Used to interact and navigate through an app</p>
+    <hr>
+    <p>The various types are:</p>
+    <button ion-button (click)="buttonClick($event)">Default</button>
+    <button ion-button outline (click)="buttonClick($event)">Outline</button>
+    <button ion-button clear (click)="buttonClick($event)">Clear</button>
+    <button ion-button round (click)="buttonClick($event)">Round</button>
+    <button ion-button block (click)="buttonClick($event)">Block</button>
+    <button ion-button full (click)="buttonClick($event)">Full</button>
+    <hr>
+    <p>The various colors available are:</p>
+    <button ion-button (click)="buttonClick($event)">None</button>
+    <button ion-button color='light' (click)="buttonClick($event)">Light</button>
+    <button ion-button color='danger' (click)="buttonClick($event)">Danger</button>
+    <button ion-button color='dark' (click)="buttonClick($event)">Dark</button>
+    <button ion-button color='secondary' (click)="buttonClick($event)">Secondary</button>
+    <button ion-button style='background-color:olive' (click)="buttonClick($event)">Custom Olive Color by Style</button>
+    <hr>
+    <p>The various sizes of the button are:</p>
+    <button ion-button (click)="buttonClick($event)">Default Size</button>
+    <button ion-button small (click)="buttonClick($event)">Small</button>
+    <button ion-button large (click)="buttonClick($event)">Large</button>
+    <hr>
+    <p>Icons can also be addded to buttons or can be used remotely as buttons</p>
+    <button ion-button icon-left (click)="buttonClick($event)">
+        <ion-icon name='home'></ion-icon>
+        Left Home Icon
+    </button>
+    <button ion-button icon-right (click)="buttonClick($event)">
+        <ion-icon name='home'></ion-icon>
+        Right Home Icon
+    </button><br>
+    <button ion-button icon-only (click)="buttonClick($event)">
+        <ion-icon name='home'></ion-icon>
+    </button>
+    <span>Only icon to be used as a button can also be done </span>
+    <hr>
+    <p>Buttons can also be added to other components. Here we are adding buttons to a list</p>
+    <ion-list>
+        <ion-item>
+            Left Icon button
+            <button ion-button outline item-end icon-left (click)="buttonClick($event)">
+                <ion-icon name="star"></ion-icon>
+                Left Icon
+            </button>
+        </ion-item>
+        <ion-item>
+            A button
+            <button ion-button outline item-end (click)="buttonClick($event)">
+                    Button
+            </button>
+        </ion-item>
+        <ion-item>
+            Right Icon button
+            <button ion-button outline item-end icon-right (click)="buttonClick($event)">
+                <ion-icon name="star"></ion-icon>
+                    Right Icon
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

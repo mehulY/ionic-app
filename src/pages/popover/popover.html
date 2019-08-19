@@ -1,0 +1,34 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>
+            Popover
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+    <button ion-button block (click)="presentPopover($event)">Show Popover</button>
+
+</ion-content> -->
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Popovers</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content #popoverContent padding class="popover-page">
+  <div #popoverText class="text-to-change">
+      <p>Is a view that floats above an app's content</p>
+      <p>Click on button below or the more icon on top right to see the popped page</p>
+      <button ion-button block (click)="presentPopover($event)">Show Popover</button>
+
+    </div>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Radio
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Is an input component that holds a boolean value</p>
+    <p>This component form a group where only one radio can be selected at a time</p>
+    <ion-list radio-group id="radioGroup" (tap)="selectedItem($event)">
+        <ion-list-header>Language</ion-list-header>
+        <ion-item>
+            <ion-label>Go</ion-label>
+            <ion-radio checked="true" value="go"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Python</ion-label>
+            <ion-radio value="python"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Javascript</ion-label>
+            <ion-radio value="javascript"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,210 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Lists
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Used to display rows of information as contact list, playlist or menu</p>
+    <p>Basic List:</p>
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+            {{item}}
+        </button>
+    </ion-list>
+    <p>Inset List:</p>
+    <ion-list inset>
+        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+            {{item}}
+        </button>
+    </ion-list>
+    <p>List Dividers:</p>
+    <ion-item-group>
+        <ion-item-divider color="light">A</ion-item-divider>
+        <ion-item>Angola</ion-item>
+        <ion-item>Argentina</ion-item>
+        <ion-item>Armenia</ion-item>
+        <ion-item>Austria</ion-item>
+        <ion-item>Australia</ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider color="light">B</ion-item-divider>
+        <ion-item>Bangladesh</ion-item>
+        <ion-item>Belarus</ion-item>
+        <ion-item>Belgium</ion-item>
+        <ion-item>Bhutan</ion-item>
+        <ion-item>Brazil</ion-item>
+    </ion-item-group>
+    <p>List headers:</p>
+    <ion-list>
+        <ion-list-header>Comedy</ion-list-header>
+        <ion-item>Airplane</ion-item>
+        <ion-item>Candyyshop</ion-item>
+        <ion-item>Coming to America</ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>Action</ion-list-header>
+        <ion-item>Terminator II</ion-item>
+        <ion-item>The Empire Strikes Back</ion-item>
+        <ion-item>Blade Runner</ion-item>
+    </ion-list>
+    <p>Icon List:</p>
+    <ion-list>
+        <ion-list-header>Classes</ion-list-header>
+        <ion-item>
+            <ion-icon name="planet" item-start></ion-icon>
+            Astronomy
+            <ion-note item-end>
+                To the Moon
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-toggle checked="false"></ion-toggle>
+            <ion-label>Muggle Studies</ion-label>
+            <ion-icon name="body" item-start></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="leaf" item-start></ion-icon>
+            Herbalogy
+            <ion-icon name="rose" item-end color="secondary"></ion-icon>
+        </ion-item>
+    </ion-list>
+    <p>Avatar List:</p>
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/dance.jpg"/>
+            </ion-avatar>
+            <h2>Dance</h2>
+            <p>This makes the world go round</p>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/music.jpg"/>
+            </ion-avatar>
+            <h2>Music</h2>
+            <p>Feel you heart and your mind</p>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src="assets/img/scene.jpg"/>
+            </ion-avatar>
+            <h2>Travel</h2>
+            <p>Enjoy the journey rather than waiting for destination</p>
+        </ion-item>
+    </ion-list>
+    <p>Multi-line list:</p>
+    <ion-list>
+        <ion-list-header>Recent Conversions</ion-list-header>
+        <ion-item>
+            <ion-icon name="rose"></ion-icon>
+            Flowers
+            <p>Most beautiful to see</p>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="star"></ion-icon>
+            Starts
+            <p>Wonderful to gaze</p>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="home"></ion-icon>
+            Home
+            <p>Place you always wanna go to</p>
+        </ion-item>
+    </ion-list>
+    <p>Sliding List:</p>
+    <ion-list>
+        <ion-item-sliding>
+            <ion-item>
+                <ion-icon name="rose"></ion-icon>
+                Flowers
+                <p>Most beautiful to see</p>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="light" icon-start>
+                    <ion-icon name="ios-more"></ion-icon>
+                    More
+                </button>
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button ion-button color="secondary" icon-start>
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+            <ion-item>
+                <ion-icon name="home"></ion-icon>
+                Home
+                <p>Keep going to</p>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="light" icon-start>
+                    <ion-icon name="ios-more"></ion-icon>
+                    More
+                </button>
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button ion-button color="secondary" icon-start>
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+            <ion-item>
+                <ion-icon name="beer"></ion-icon>
+                Pub
+                <p>Spill and Chill</p>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="light" icon-start>
+                    <ion-icon name="ios-more"></ion-icon>
+                    More
+                </button>
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="text"></ion-icon>
+                    Text
+                </button>
+                <button ion-button color="secondary" icon-start>
+                    <ion-icon name="call"></ion-icon>
+                    Call
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+    <p>Thumbnail List:</p>
+    <ion-list>
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/img/scene.jpg"/>
+            </ion-thumbnail>
+            <h2>Travel</h2>
+            <p>Where do you wanna go next?</p>
+            <button ion-button clear item-end (click)="listBtnClick($event)">Start</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/img/dance.jpg"/>
+            </ion-thumbnail>
+            <h2>Dance</h2>
+            <p>What do you wanna spin to next?</p>
+            <button ion-button clear item-end (click)="listBtnClick($event)">Register</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/img/music.jpg"/>
+            </ion-thumbnail>
+            <h2>Music</h2>
+            <p>What do you wanna listen?</p>
+            <button ion-button clear item-end (click)="listBtnClick($event)">Listen</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

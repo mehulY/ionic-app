@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>DateTime</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>To present an interface that makes it easy for users to select dates and times</p>
+    <hr>
+    <p>Present blank data to be selected by user entirely</p>
+    <ion-item>
+        <ion-label>Start time</ion-label>
+        <ion-datetime displayFormat="h:mm A" 
+            pickerFormat="h mm A"></ion-datetime>
+    </ion-item>
+    <hr>
+    <p>Present user with default data with access to make the changes</p>
+    <ion-item>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ends</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.timeEnds"></ion-datetime>
+    </ion-item>
+
+    <button ion-item (tap)="showOptions()">
+      <ion-label>Repeat</ion-label>
+      <ion-note item-end>{{repeat}}</ion-note>
+    </button>
+
+    <button ion-item (tap)="travelOptions()">
+      <ion-label>Travel Time</ion-label>
+      <ion-note item-end>{{travelTime}}</ion-note>
+    </button>
+    
+</ion-content>

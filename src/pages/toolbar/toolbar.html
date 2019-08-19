@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Toolbar</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Is a generic bar that can be used in an app as a header, sub-header, footer or even sub-footer</p>
+    <p>Since this is based in flexbox, you can have multiple toolbars,yes we can, in our page and each will be displayed correctly and ion-content will adjust accordingly</p>
+    <hr>
+    <p>Can be used as a footer, as the one at the end</p>
+    <hr>
+    <p>As a header</p>
+    <ion-toolbar color="primary">
+        <button ion-button icon-only (click)="toolbarBtnClick($event)">
+            <ion-icon name="more"></ion-icon>
+        </button>
+        <span>This is toolbar with a button</span>
+    </ion-toolbar>
+    <hr>
+    <p>Changing Color</p>
+    <ion-toolbar color="primary">
+      <ion-title>Toolbar</ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="secondary">
+      <ion-title>Toolbar</ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="danger">
+      <ion-title>Toolbar</ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="dark">
+      <ion-title>Toolbar</ion-title>
+    </ion-toolbar>
+    <hr>
+    <p>For the segment in toolbar</p>
+    <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-segment>
+      <ion-segment-button value="new">
+        New
+      </ion-segment-button>
+      <ion-segment-button value="hot">
+        Hot
+      </ion-segment-button>
+    </ion-segment>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <hr>
+  <p>Searchbar in toolbar</p>
+  <ion-toolbar color="primary">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>This is the toolbar in footer</ion-title>
+    </ion-toolbar>
+</ion-footer>

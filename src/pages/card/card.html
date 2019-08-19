@@ -1,0 +1,136 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Cards
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Are great way of displaying important information</p>
+    <p>Emerging as a core design pattern</p>
+    <hr>
+    <ion-card>
+        <ion-card-content>
+            This a BASIC CARD. It just displays text with no styling other than card layout and a shadowing
+        </ion-card-content>
+    </ion-card>
+    <hr>
+    <ion-card>
+        <ion-card-header>
+            Card Headers
+        </ion-card-header>
+        <ion-card-content>
+            This is a card with a header as well. Hence can be titled
+        </ion-card-content>
+    </ion-card>
+    <hr>
+    <ion-card>
+        <ion-card-header>
+            Card Lists
+        </ion-card-header>
+        <ion-list (click)="itemSelected($event)">
+            <button ion-item>
+                <ion-icon name='cart' item-start></ion-icon>
+                Shopping
+            </button>
+            <button ion-item>
+                <ion-icon name='cafe' item-start></ion-icon>
+                Cafe
+            </button>
+            <button ion-item>
+                <ion-icon name='beer' item-start></ion-icon>
+                Pub
+            </button>
+            <button ion-item>
+                <ion-icon name='planet' item-start></ion-icon>
+                    Space
+            </button>
+        </ion-list>
+    </ion-card>
+    <hr>
+    <ion-card>
+        <ion-card-header>
+            Card Images
+        </ion-card-header>
+        <img src='assets/img/scene.jpg'/>
+        <ion-card-title padding>
+        <!-- provide padding to ensure the title comes at a proper alignment -->
+            Card Title
+        </ion-card-title>
+        <ion-card-content>
+            Travel around the world's most popular places in 6 months.
+            Register now!!
+        </ion-card-content>
+    </ion-card>
+    <hr>
+    <ion-card class='card-background-image'>
+        <ion-card-header>
+            Background Images
+        </ion-card-header>
+        <img src='assets/img/dance.jpg'/>
+        <div class='card-start'>Rock Songs</div>
+        <div class='card-subtitle'>21 songs</div>
+    </ion-card>
+    <hr>
+    <p>Advanced cards can be:</p>
+    <ion-card>
+        <ion-card-header>
+            Social Cards
+        </ion-card-header>
+        <ion-item>
+            <ion-avatar item-start>
+                <img src='assets/img/music.jpg'/>
+            </ion-avatar>
+            <h2>Love songs</h2>
+            <p>One that reminds you of someone</p>
+        </ion-item>
+        <img src='assets/img/music.jpg'/>
+        <ion-card-content>
+            <p>Any time any song you want to search, come to us</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button id="likeBtn" ion-button icon-left clear small (click)="buttonClick($event)">
+                    <ion-icon name='thumbs-up'></ion-icon>
+                    {{tap}} Likes
+                </button>
+            </ion-col>
+            <ion-col>
+                <button id="commentBtn" ion-button icon-left clear small (click)="buttonClick($event)">
+                    <ion-icon name='text'></ion-icon>
+                    {{comments}} Comments
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Map Cards
+        </ion-card-header>
+        <img src='assets/img/map.jpg'/>
+        <!-- <ion-fab right top>
+            <button ion-fab>
+                <ion-icon name='pin'></ion-icon>
+            </button>
+        </ion-fab> -->
+        <ion-item>
+            <ion-icon name='football' item-start large></ion-icon>
+            <h2>Museum of Football</h2>
+            <p>P 11 North Street, South Carolina</p>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='wine'item-start large></ion-icon>
+            <h2>Inistitute of Fine Cocktails</h2>
+            <p>14 S. South Carolina</p>
+        </ion-item>
+        <ion-item>
+            <span item-left>18 min</span>
+            <span item-left>(2.6 mi)</span>
+            <button ion-button icon-left clear item-end (click)="buttonClick($event)">
+                <ion-icon name='navigate'></ion-icon>
+                Start
+            </button>
+        </ion-item>
+    </ion-card>
+</ion-content>

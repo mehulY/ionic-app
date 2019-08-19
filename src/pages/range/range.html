@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Range
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Is a control that lets users select from a range of values by moving a slider knob along the slider bar or track</p>
+    <p>A simple range ui-component is</p>
+    <ion-item>
+        <ion-range></ion-range>
+    </ion-item>
+    <p>Can have different colors</p>
+    <ion-item>
+        <ion-range color="secondary"></ion-range>
+    </ion-item>
+    <ion-item>
+        <ion-range color="dark"></ion-range>
+    </ion-item>
+    <ion-item>
+        <ion-range color="danger"></ion-range>
+    </ion-item>
+    <p>Can customize to have icons on each side</p>
+    <ion-item>
+        <ion-range (ionBlur)="firstChanged($event)" [(ngModel)]="first">
+          <ion-icon range-left small name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+    </ion-item>
+    <p>Can show the value selected in range as a pin with minimum and maxinum specified</p>
+    <ion-item>
+        <ion-range min="0" max="200" (ionBlur)="firstChanged($event)" pin="true" [(ngModel)]="second">
+          <ion-icon range-left small name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+    </ion-item>
+    <p>Can have dual-knobs for more flexible range selection</p>
+    <ion-item>
+        <ion-range dualKnobs="true" (ionBlur)="firstChanged($event)" pin="true" [(ngModel)]="third">
+          <ion-icon range-left small name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+    </ion-item>
+    <p>Can have different step value than the default one</p>
+    <ion-item>
+        <ion-range min="100" pin="true" (ionBlur)="firstChanged($event)" max="200" step="10" snaps="true" [(ngModel)]="fourth">
+          <ion-icon range-left small name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+    </ion-item>
+</ion-content>
